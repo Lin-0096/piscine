@@ -13,10 +13,8 @@
 int	ft_is_prime(int nb)
 {
 	int	i;
-	int	result;
 
 	i = 2;
-	result = 0;
 	if (nb == 0 || nb == 1)
 		return (0);
 	while (i < nb)
