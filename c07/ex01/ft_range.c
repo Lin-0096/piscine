@@ -16,19 +16,20 @@ int	*ft_range(int min, int max)
 {
 	int	*arr;
 	int	i;
+	int	len;
 
 	i = 0;
-	if (min >= max)
+	if (min > max)
 	{
 		return (NULL);
 	}
-	arr = malloc(sizeof(int) * (max - min));
+	len = max - min + 1;
+	arr = malloc(sizeof(int) * len);
 	if (arr == NULL)
 		return (NULL);
-	while (min < max)
+	while (i < len)
 	{
-		arr[i] = min;
-		min++;
+		arr[i] = min + i;
 		i++;
 	}
 	return (arr);
